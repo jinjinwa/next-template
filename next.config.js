@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const requireHacker = require("require-hacker");
 const glob = require("glob");
+const { version } = require("./package.json");
 
 function setupRequireHacker() {
   const webjs = ".web.js";
@@ -35,6 +36,10 @@ function moduleDir(m) {
 }
 
 module.exports = {
+  generateBuildId: async () => {
+    // For example get the latest git commit hash here
+    return `MY_BUILD_ID${version}`;
+  },
   webpack: (config, { dev }) => {
     config.resolve.extensions = [".web.js", ".js", ".json"];
 

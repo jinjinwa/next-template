@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Router from "next/router";
 import { TabBar } from "antd-mobile";
+import PropTypes from "prop-types";
 
 const tabBarData = [
   {
@@ -61,5 +62,10 @@ class MenuBar extends Component {
     );
   }
 }
+
+MenuBar.propTypes = {
+  isMenubar: PropTypes.bool,
+  pathname: PropTypes.string
+};
 
 export default MenuBar;

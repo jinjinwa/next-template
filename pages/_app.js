@@ -1,8 +1,7 @@
 import App, { Container } from "next/app";
 import React from "react";
-import withMobxStore from "../lib/mobx-store";
+import { withMobxStore } from "@lib";
 import { Provider } from "mobx-react";
-import { PageTransition } from "next-page-transitions";
 
 class MyApp extends App {
   render() {
@@ -11,9 +10,7 @@ class MyApp extends App {
     return (
       <Container>
         <Provider store={mobxStore}>
-          <PageTransition timeout={200} classNames="page-transition">
-            <Component {...pageProps} />
-          </PageTransition>
+          <Component {...pageProps} />
         </Provider>
       </Container>
     );

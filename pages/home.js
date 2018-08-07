@@ -5,35 +5,17 @@ import { Page, Layout } from "@lib";
 // import Link from "next/link";
 
 const Initial = async () => {
-  const title = "HOME";
+  const title = "首页";
   return { title };
 };
 
 @inject("store")
 @observer
 class Index extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hidden: true
-    };
-  }
-
-  handleSwitch = () => {
-    this.setState({
-      hidden: !this.state.hidden
-    });
-  };
-
   render() {
-    console.log("index", this.props);
-    const { hidden } = this.state;
     return (
-      <Layout {...this.props} wrapClass="home" isMenubar={hidden}>
+      <Layout {...this.props} wrapClass="home" isMenubar={true}>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <div className="switch" onClick={this.handleSwitch}>
-          点击切换tab-bar
-        </div>
       </Layout>
     );
   }
