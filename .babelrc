@@ -1,0 +1,40 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "styled-jsx/babel",
+      {
+        "plugins": ["styled-jsx-plugin-less"]
+      }
+    ],
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "styles": "./styles",
+          "@api": "./api",
+          "@store": "./store",
+          "@utils": "./utils",
+          "@components": "./components",
+          "@lib": "./lib"
+        },
+        "cwd": "babelrc"
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd-mobile"
+      }
+    ],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["css$", "less$"]
+      }
+    ]
+  ]
+}

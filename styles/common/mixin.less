@@ -1,0 +1,113 @@
+// flex居中
+.all_center(@row: center, @col: center) {
+  display: flex;
+  display: -webkit-flex;
+  align-items: @row;
+  -webkit-align-items: @row;
+  justify-content: @col;
+  -webkit-justify-content: @col;
+}
+//1像素下边框
+.border-1px(@color: @color-row-line,@type: solid,@left:0px) {
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: @left;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px @type @color;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+
+//1像素上边框
+.border-1px-top(@color: @color-row-line, @type: solid,@left:0px) {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: @left;
+    top: 0px;
+    width: 100%;
+    border-top: 1px @type @color;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+
+//清除边框
+.border-none {
+  &::after {
+    display: none;
+  }
+}
+
+//清除浮动
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//水平居中
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  /* IE 9 */
+  -moz-transform: translateX(-50%);
+  /* Firefox */
+  -webkit-transform: translateX(-50%);
+  /* Safari 和 Chrome */
+  -o-transform: translateX(-50%);
+}
+
+//垂直居中
+.middle {
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  /* IE 9 */
+  -moz-transform: translateY(-50%);
+  /* Firefox */
+  -webkit-transform: translateY(-50%);
+  /* Safari 和 Chrome */
+  -o-transform: translateY(-50%);
+}
+
+//水平垂直都居中
+.allCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* IE 9 */
+  -moz-transform: translate(-50%, -50%);
+  /* Firefox */
+  -webkit-transform: translate(-50%, -50%);
+  /* Safari 和 Chrome */
+  -o-transform: translate(-50%, -50%);
+}
+
+// 单行省略号
+.line-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 双行省略号
+.line-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
+}

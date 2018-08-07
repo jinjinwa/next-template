@@ -1,0 +1,41 @@
+.example-enter {
+  opacity: 0.01;
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.example-leave {
+  opacity: 0.01;
+}
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in-out;
+}
+
+
+
+
+// .slide2-in-enter {
+//   transform: translate3D(100%, 0, 0);
+//   transition: all 300ms linear;
+
+//   &.slide2-in-enter-active {
+//     transform: translate3D(0, 0, 0);
+//   }
+// }
+
+// // 向左滑出
+// .slide2-in-leave {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   opacity: 1;
+//   transform: translate3D(0, 0, 0);
+//   transition: all 300ms linear;
+
+//   &.slide2-in-leave-active {
+//     opacity: 0.01;
+//     transform: translate3D(-100%, 0, 0);
+//   }
+// }

@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "eslint:recommended"],
+  "parser": "Babel-ESLint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "ecmaVersion": 6,
+      "experimentalObjectRestSpread": true,
+      "classes": true,
+      "modules": true,
+      "defaultParams": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "no-case-declarations": 0,
+    "no-console": 0,
+    "react/display-name": 0,
+    "react/no-deprecated": 0,
+    "react/prop-types": 1
+  }
+}

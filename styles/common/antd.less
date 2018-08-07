@@ -1,0 +1,58 @@
+@import "./color.less";
+// picker
+.am-picker-popup-item {
+  &.am-picker-popup-header-left {
+    color: @color-grey;
+  }
+  &.am-picker-popup-header-right {
+    color: @theme;
+  }
+}
+
+//modal
+.am-modal-button-group-h {
+  .am-modal-button {
+    color: @theme;
+  }
+}
+
+// toast
+.am-toast {
+  -webkit-transform: translateZ(2px);
+  transform: translateZ(2px);
+}
+
+//list 样式重置
+.am-list-item {
+  .am-list-line {
+    .am-list-content {
+      font-size: @size14;
+      color: @color-dark-grey;
+    }
+    .am-input-control {
+      input {
+        font-size: @size14;
+      }
+    }
+    .am-list-extra {
+      font-size: @size14;
+      flex-basis: 50%;
+    }
+    .am-input-label {
+      font-size: @size14;
+    }
+  }
+  textarea {
+    font-size: @size14;
+  }
+}
+
+//复选框
+.am-checkbox {
+  &.am-checkbox-checked {
+    .am-checkbox-inner {
+      background-color: @theme;
+      border: solid 1px @theme;
+    }
+  }
+}
