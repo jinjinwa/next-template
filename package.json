@@ -37,11 +37,12 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "vconsole": "^3.2.0",
-    "next-page-transitions": "1.0.0-alpha.2"
+    "next-page-transitions": "1.0.0-alpha.2",
+    "compression": "^1.7.2"
   },
   "devDependencies": {
-    "prop-types": "^15.6.2",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.6.3",
     "babel-plugin-inline-dotenv": "^1.1.1",
@@ -61,6 +62,7 @@
     "less-loader": "^4.0.6",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^2.0.9",
+    "prop-types": "^15.6.2",
     "raw-loader": "^0.5.1",
     "require-hacker": "^3.0.0",
     "styled-jsx-plugin-less": "0.0.1-alpha.1",
