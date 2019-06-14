@@ -35,7 +35,7 @@
     "next": "^6.1.1",
     "nprogress": "^0.2.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.2",
     "vconsole": "^3.2.0",
     "next-page-transitions": "1.0.0-alpha.2",
     "compression": "^1.7.2"
